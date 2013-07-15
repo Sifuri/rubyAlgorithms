@@ -18,5 +18,5 @@ puts "  Celsius " + "		Fahrenheit"
 # and display table data.
 21.times do |x|
 	fahrenheit = 9/5.0*x+32
-	puts "    #{x}" + "                   #{sprintf('%.1f' , fahrenheit)}  "
+	puts "    #{x}" + "                     #{sprintf('%.1f' , fahrenheit)}"
 end
