@@ -10,16 +10,19 @@ line number followed by a colon. The line numbering should start at 1.
 
 # Prompt user for file name
 puts "Enter a file name: "
-fileName = gets
+fileName = gets.chomp # The gets method prompts the user
+					  # for input from the console. It
+					  # is succeeded by a newline character
+					  # which can be suppressed by chaining 
+					  # the chomp method.
 
 # Open file
-doc = File.open('LineNumbers.txt', 'r')
+doc = File.open("#{fileName}" + ".txt", 'r')
 
 # Enumerate over file and print each line
 # following it's position number and a colon. 
 doc.each_with_index do |line, index|
-	pos = index + 1
-	puts "#{pos}: #{line}" 
+	puts "#{index + 1}: #{line}" 
 end
 
 # Close file
